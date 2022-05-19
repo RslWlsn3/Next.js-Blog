@@ -43,7 +43,6 @@ export const getStaticPaths = async () => {
 //nextjs func
 //fetch content of the post
 //this function gets passed a Context parameter which includes a params key (from getStaticPaths)
-
 export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMetadata = fs
     .readFileSync(path.join("posts", slug + ".md"))
